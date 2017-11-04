@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Chun YANGYANG</title>
+		<meta charset="UTF-8"/>
+<style>
+.pang_dun_dun {
+	font-weight: bold;
+	font-size: 100px;
+
+	border: 1px solid blue;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.stupid {
+	color: red;
+}
+
+.clever {
+	color: #0f0;
+}
+</style>
+<script>
+function jiao_ma_ma(x) {
+	if (x==-1) {
+		alert('小羊没有吨！');
+		return;
+	}
+
+	let s='';
+	for (let i=0; i<x; ++i)
+		s += 'mama! ';
+	alert(s);
+}
+
+let cnt = {}
+function bien(x, s) {
+	x.cnt = x.cnt || 0;
+	++x.cnt;
+	console.log(x.cnt);
+	let pets = ['🐶', '🐱', '🍄', '💩'];
+	let n = pets.length;
+	if (s=='') {
+		let r = Math.floor(Math.random()*n);
+		s = pets[r];
+	} else if (x.cnt % 6 == 5) {
+		alert('狗带啦！');
+	}
+	x.innerText=s;
+}
+
+let yang_yang_you_duo_chun = 255;
+</script>
+	</head>
+	<body>
+		<div>
+			<span class="stupid" onclick="jiao_ma_ma(1)">🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑</span><br/>
+			<span class="clever" onclick="jiao_ma_ma(2)">🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑</span><br/>
+			<span class="dundun pang_dun_dun" onclick="jiao_ma_ma(-1)">
+				<span onmouseover="bien(this, '')" onmouseleave="bien(this, '🐑')">🐑</span>
+				<span onmouseover="bien(this, '🐶')" onmouseleave="bien(this, '🐑')">🐑</span>
+				<span onmouseover="bien(this, '')" onmouseleave="bien(this, '🐑')">🐑</span>
+				<span onmouseover="bien(this, '')" onmouseleave="bien(this, '🐑')">🐑</span>
+				<span onmouseover="bien(this, '')" onmouseleave="bien(this, '🐑')">🐑</span>
+				<span onmouseover="bien(this, '')" onmouseleave="bien(this, '🐑')">🐑</span>
+				<span onmouseover="bien(this, '')" onmouseleave="bien(this, '🐑')">🐑</span>
+				<span onmouseover="bien(this, '')" onmouseleave="bien(this, '🐑')">🐑</span>
+			</span>
+			<br/>
+			<span class="stupid" onclick="jiao_ma_ma(yang_yang_you_duo_chun)">🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑</span><br/>
+		</div>
+	</body>
+</html>
