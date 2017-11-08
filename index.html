@@ -44,7 +44,11 @@ function bien(x, s) {
 	if (s=='') {
 		let r = Math.floor(Math.random()*n);
 		s = pets[r];
+	} else if (x.cnt % 2 == 0) {
+
 	} else if (x.cnt % 6 == 5) {
+		alert('噗！');
+	} else {
 		alert('夹紧紧！插深深！');
 	}
 	x.innerText=s;
